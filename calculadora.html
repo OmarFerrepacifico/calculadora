@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>calculadora</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+          
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active" >cotizacion</a>
+                 
+                    </div>
+                
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 hero-header mb-5">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+               <img class="img-fluid" src="img/images.png" alt="">
+                </div>
+
+                   <div class="col-lg-6 align-self-center text-rigth text-lg-start mb-lg-5">
+                    <h1 style="color:white;"> Tuconcreto</h1>
+                </div>
+                           </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Full Screen Search Start -->
+
+    <!-- Full Screen Search End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+       
+                            <input value="Formulariosintítulo-1623774985781" type="hidden" name="elqFormName">
+                            <input value="2048048642" type="hidden" name="elqSiteId">
+                            <input name="elqCampaignId" type="hidden">
+                    
+                    
+                            <!-- PRODUCTS -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="elq-label" for="fe256" id="productName">Selecciona los productos que necesitas:<span class="elq-required">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="row">
+                     <label>      ¿Cómo calcular los metros cúbicos de concreto para tu obra?
+Ahora puedes conocer la cantidad aproximada de metros cúbicos de concreto que necesitas con nuestra Calculadora de Concreto .
+
+Selecciona el tipo de obra que estás desarrollando, una vez seleccionado, ingresa las unidades métricas. Es importante que consideres un porcentaje de desperdicio en caso de que sea necesario.
+
+No necesitas preocuparte por la fórmula para calcular concreto con esta herramienta puedes aproximar el concreto por m3 para construir losas, banquetas, columnas o cualquier estructura.
+
+Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para ofrecerte una cotización formal sobre el volumen del concreto, asistencia técnica y atender todas las necesidades de tu obra.
+</label>      
+                      </div>
+                      <br/>  
+                       <br/>  
+                            <div class="row">
+                               <div class="container"> 
+                                    <h1>Calcule el volumen    </h1>
+                                    <div class="row"> 
+                                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > seleccionar forma</label>
+<select class="form-control" id="seleccion" onchange="handleSelectChange(event)">  
+    <option></option>
+<option value="1">Cuadrado /Rectangulo</option>
+<option value="2">Circulo</option>
+<option value="3" >Triangulo</option>
+  </select>
+</div>
+                                      </div>
+                                  </div>
+<div class="container" id="forma_cuadrado"> 
+    <h4>   Rectangulo/cuadrado </h4>
+
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+           <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Ancho</label>
+    <input type="text" class="form-control" id="Ancho_c" onchange="cuadradocambio(event)">
+    </div>
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+     <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Largo</label>
+        <input type="text" class="form-control" id="Largo_c"  onchange="cuadradocambio(event)">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+       <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Profundidad</label>
+        <input type="text" class="form-control"   id="Profundidad_c" onchange="cuadradocambio(event)">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+
+<br/>  
+<br/>     
+     <div class="row">   
+        <h6>Datos de la Forma     </h6>
+
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen   </label>
+             <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="vol_c"> Volumen   </label>
+         </div>
+
+
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+               <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
+        <input type="text" class="form-control"  id="reserv_c" onchange="cuadradocambio_reserva(event)">
+         </div>
+        </div>
+           <div class="row">  <h3>  Total :</h3>   <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tot_c">    </label>
+ </div>
+         </div> 
+   
+</div>
+
+
+
+<div class="container" id="forma_Circulo"> 
+    <h4>   Circulo</h4>
+
+           <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Radio</label>
+    <input type="text" class="form-control"  name="">
+    </div>
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+     <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Angulo</label>
+        <input type="text" class="form-control"  name="">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+           
+  </div>
+     </div>
+       <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Profundidad</label>
+        <input type="text" class="form-control"  name="">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+
+  <div class="row">   
+        <h6>Datos de la Forma     </h6>
+
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+             <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  > Volumen   </label>
+         </div>
+
+
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+               <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
+        <input type="text" class="form-control"  name="">
+         </div>
+        </div>
+           <div class="row">  <h3>  Total :</h3>
+     </div>
+</div>
+
+
+
+</div>
+<div class="container " id="forma_Triangulo"> 
+    <h4>   Triangulo</h4>
+
+
+                       
+           <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Ancho</label>
+    <input type="text" class="form-control"  id="Ancho_T" onchange="triangulocambio(event)">
+    </div>
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+     <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Largo</label>
+        <input type="text" class="form-control"  id="Largo_T" onchange="triangulocambio(event)">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+     </div>
+       <div class="row">            
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Profundidad</label>
+        <input type="text" class="form-control"   id="Profundidad_T" onchange="triangulocambio(event)">
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Unidad</label>
+    <select class="form-control">
+    <option selected="selected" data-conversion-ratio="1.0" value="M">m</option>
+     <option data-conversion-ratio="0.01" value="CM">cm</option>
+     <option data-conversion-ratio="0.001" value="MM">mm</option>
+     <option data-conversion-ratio="0.9144" value="YARDS">yardas</option>
+     <option data-conversion-ratio="0.3048" value="FEET">pies</option>
+     <option data-conversion-ratio="0.0254" value="IN">in cale</option>
+ </select>
+  </div>
+
+  <div class="row">   
+        <h6>Datos de la Forma     </h6>
+
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  > Volumen   </label>
+             <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="vol_T" >    </label>
+         </div>
+
+
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+               <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
+        <input type="text" class="form-control"  id="reserv_T"   onchange="Triangulocambio_reserva(event)">
+         </div>
+        </div>
+           <div class="row">  <h3>  Total :</h3>     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tot_T" >    </label>
+     </div>
+</div>
+
+
+                            </div>
+                    
+    </div>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+
+         document.getElementById("forma_Triangulo").style.display = "none";
+  document.getElementById("forma_Circulo").style.display = "none";
+    document.getElementById("forma_cuadrado").style.display = "none";
+
+        function handleSelectChange(event) {
+            var seleccion=event.target.value;
+            console.log( seleccion)
+
+if(seleccion=="1"){
+     document.getElementById("forma_cuadrado").style.display = "block";
+             document.getElementById("forma_Triangulo").style.display = "none";
+              document.getElementById("forma_Circulo").style.display = "none";
+}
+  else  if(seleccion=="2"){
+     document.getElementById("forma_Circulo").style.display = "block";
+         document.getElementById("forma_cuadrado").style.display = "none";
+                  document.getElementById("forma_Triangulo").style.display = "none";
+  }
+       else if(seleccion=="3"){
+
+                       document.getElementById("forma_Triangulo").style.display = "block";
+                         document.getElementById("forma_Circulo").style.display = "none";
+    document.getElementById("forma_cuadrado").style.display = "none";
+       }
+            
+                 
+    
+        }
+
+ function cuadradocambio(event) {
+
+    var Ancho_c= $("#Ancho_c").val();
+var Profundidad_c= $("#Profundidad_c").val();
+var Largo_c= $("#Largo_c").val();
+console.log(Ancho_c);
+console.log(Profundidad_c);
+console.log(Largo_c);
+var total= Ancho_c*Largo_c*Profundidad_c;
+  console.log(total); 
+$("#vol_c").text(total);
+
+ }
+
+
+  function cuadradocambio_reserva(event) {
+
+    var Ancho_c= $("#Ancho_c").val();
+var Profundidad_c= $("#Profundidad_c").val();
+var Largo_c= $("#Largo_c").val();
+console.log(Ancho_c);
+console.log(Profundidad_c);
+console.log(Largo_c);
+var total= Ancho_c*Largo_c*Profundidad_c;
+  console.log(total); 
+
+var reserv_c= $("#reserv_c").val();
+ var g_total=(reserv_c*total)/100;
+ $("#tot_c").text(total+g_total);
+ }
+
+
+ function triangulocambio(event) {
+
+    var Ancho_T= $("#Ancho_T").val();
+var Profundidad_T= $("#Profundidad_T").val();
+var Largo_T= $("#Largo_T").val();
+console.log(Ancho_T);
+console.log(Profundidad_T);
+console.log(Largo_T);
+var total= Ancho_T*Largo_T*Profundidad_T;
+  console.log(total); 
+$("#vol_T").text(total/2);
+
+ }
+
+
+
+  function Triangulocambio_reserva(event) {
+
+    var Ancho_T= $("#Ancho_T").val();
+var Profundidad_T= $("#Profundidad_T").val();
+var Largo_T= $("#Largo_T").val();
+
+var total= (Ancho_T*Largo_T*Profundidad_T)/2;
+  console.log(total); 
+
+var reserv_T= $("#reserv_T").val();
+ var g_total=(reserv_T*total)/100;
+ $("#tot_T").text(total+g_total);
+ }
+
+reserv_T
+tot_T
+
+    </script>
+</body>
+
+</html>
