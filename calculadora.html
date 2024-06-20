@@ -30,6 +30,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style >
+        .full-width-image {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+    </style>
 </head>
 
 <body>
@@ -134,9 +141,27 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
 </div>
                                       </div>
                                   </div>
+
+                                  <div class="container" id="paso1"> <h4 id="h_paso">Paso 1</h4>
+                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <h5 id="h2_paso"> Calcule el volumen</h5>
+                                        </div>
+                                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+
+
+
+    <img class="img-fluid full-width-image" src="img/pasos.png" alt="" id="img_paso1">
+      <img class="img-fluid full-width-image" src="img/paso2.png" alt="" id="img_paso2">
+        <img class="img-fluid full-width-image" src="img/paso3.png" alt="" id="img_paso3">
+    <input type="text" id="text_valor_paso" value=0>
+</div>
+                                </div>
+                                <div class="container" id="cont_area"> 
 <div class="container" id="forma_cuadrado"> 
     <h4>   Rectangulo/cuadrado </h4>
-
+     
+  <div class="row">  
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
            <div class="row">            
  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -195,21 +220,25 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
      <div class="row">   
         <h6>Datos de la Forma     </h6>
 
-         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen   </label>
              <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="vol_c"> Volumen   </label>
          </div>
 
 
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
         <input type="text" class="form-control"  id="reserv_c" onchange="cuadradocambio_reserva(event)">
+         </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-fluid" src="img/cuadrado.png" width="200px" height="200px">
          </div>
         </div>
            <div class="row">  <h3>  Total :</h3>   <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tot_c">    </label>
  </div>
          </div> 
-   
+    </div>
+
 </div>
 
 
@@ -263,14 +292,17 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
   <div class="row">   
         <h6>Datos de la Forma     </h6>
 
-         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
              <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  > Volumen   </label>
          </div>
 
 
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
         <input type="text" class="form-control"  name="">
+         </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-fluid" src="img/circulo.png" width="200px" height="200px">
          </div>
         </div>
            <div class="row">  <h3>  Total :</h3>
@@ -339,15 +371,18 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
   <div class="row">   
         <h6>Datos de la Forma     </h6>
 
-         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  > Volumen   </label>
              <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="vol_T" >    </label>
          </div>
 
 
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                <label  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > Volumen de reserva</label>
         <input type="text" class="form-control"  id="reserv_T"   onchange="Triangulocambio_reserva(event)">
+         </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-fluid" src="img/triangulo.png" width="200px" height="200px">
          </div>
         </div>
            <div class="row">  <h3>  Total :</h3>     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tot_T" >    </label>
@@ -356,6 +391,32 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
 
 
                             </div>
+                             </div>
+
+                             <div  class="container "id="sel_proyect"> 
+                                  <br/>     <br/>     <br/>   
+                                <div class="row">   
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+<select id="select_tipo" class="form-control" onchange="selecciontipo(event)">   
+    <option  value="0" > </option>
+ <option  value="1" >Cimentación </option>
+<option value="2" >Losa de entrepiso  </option>
+<option value="3" >Losa sobre terreno  </option>
+<option value="4" >Otros </option>
+</select> 
+</div>
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+<select id="select_subtipo" class="form-control">   
+
+</select> 
+</div>
+</div>
+                              </div>
+                              <br/>  
+<br/>  <br/>  
+<div class="container">  <br/>  
+<br/>  <br/>    <div class="row"> <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">  </div>  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><button class="btn-info form-control" id="btn_siguiente" onclick="clicksiguiente(event)" > Siguiente</button> </div>  </div>  </div>
+                               
                     
     </div>
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
@@ -373,7 +434,153 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
+ function selecciontipo(event) {
 
+  
+        var select_tipo = $("#select_tipo").val();
+      
+        if(select_tipo==1){
+    const opciones = [
+           { valor: '', texto: '' },
+            { valor: 'Losa de cimentación', texto: 'Losa de cimentación' },
+            { valor: 'Cajón de cimentación', texto: 'Cajón de cimentación' },
+            { valor: 'Zapata corrida', texto: 'Zapata corrida' },
+            { valor: 'Zapata aislada', texto: 'Zapata aislada' },
+             { valor: 'Otros', texto: 'Otros' }
+        ];
+
+        // Referencia al select en el DOM
+        const selectSubtipo = document.getElementById('select_subtipo');
+           selectSubtipo.innerHTML = '';
+             opciones.forEach(opcion => {
+                // Crear un nuevo elemento <option>
+                const nuevaOpcion = document.createElement('option');
+                nuevaOpcion.value = opcion.valor;
+                nuevaOpcion.textContent = opcion.texto;
+
+                // Agregar la nueva opción al select
+                selectSubtipo.appendChild(nuevaOpcion);
+            });
+        
+}
+///////////////////
+
+    if(select_tipo==2){
+
+    const opciones = [
+           { valor: '', texto: '' },
+            { valor: '1', texto: 'Losa maciza' },
+            { valor: '2', texto: 'Losa aligerada (vigueta y bovedilla)' },
+ 
+             { valor: 'Otros', texto: 'Otros' }
+        ];
+
+        // Referencia al select en el DOM
+        const selectSubtipo = document.getElementById('select_subtipo');
+           selectSubtipo.innerHTML = '';
+             opciones.forEach(opcion => {
+                // Crear un nuevo elemento <option>
+                const nuevaOpcion = document.createElement('option');
+                nuevaOpcion.value = opcion.valor;
+                nuevaOpcion.textContent = opcion.texto;
+
+                // Agregar la nueva opción al select
+                selectSubtipo.appendChild(nuevaOpcion);
+            });
+        
+}
+
+
+    if(select_tipo==3){
+
+    const opciones = [
+           { valor: '', texto: '' },
+            { valor: '1', texto: 'Pavimentos' },
+            { valor: '2', texto: 'Banquetas' },
+ 
+             { valor: 'Otros', texto: 'Otros' }
+        ];
+
+        // Referencia al select en el DOM
+        const selectSubtipo = document.getElementById('select_subtipo');
+           selectSubtipo.innerHTML = '';
+             opciones.forEach(opcion => {
+                // Crear un nuevo elemento <option>
+                const nuevaOpcion = document.createElement('option');
+                nuevaOpcion.value = opcion.valor;
+                nuevaOpcion.textContent = opcion.texto;
+
+                // Agregar la nueva opción al select
+                selectSubtipo.appendChild(nuevaOpcion);
+            });
+        
+}
+
+   if(select_tipo==4){
+
+    const opciones = [
+           { valor: '', texto: '' },
+            { valor: '1', texto: 'Muros' },
+            { valor: '2', texto: 'Columnas' },
+     { valor: '3', texto: 'trabes' },
+             { valor: 'Otros', texto: 'Otros' }
+        ];
+
+        // Referencia al select en el DOM
+        const selectSubtipo = document.getElementById('select_subtipo');
+           selectSubtipo.innerHTML = '';
+             opciones.forEach(opcion => {
+                // Crear un nuevo elemento <option>
+                const nuevaOpcion = document.createElement('option');
+                nuevaOpcion.value = opcion.valor;
+                nuevaOpcion.textContent = opcion.texto;
+
+                // Agregar la nueva opción al select
+                selectSubtipo.appendChild(nuevaOpcion);
+            });
+        
+}
+
+ }
+ function clicksiguiente(event) {
+    var text_valor_paso = $("#text_valor_paso").val();
+    if (text_valor_paso==0){
+$("#text_valor_paso").val(2);
+$("#h_paso").text("Paso 2");
+$("#h2_paso").text("Elija su proyecto");
+
+   document.getElementById("img_paso1").style.display = "none";
+ 
+            document.getElementById("img_paso2").style.display = "block";
+
+  document.getElementById("sel_proyect").style.display = "block";
+   document.getElementById("cont_area").style.display = "none";
+            
+    }
+     if (text_valor_paso==2){
+$("#text_valor_paso").val(2);
+$("#h_paso").text("Paso 3");
+$("#h2_paso").text("Solicite una cotización");
+
+   document.getElementById("img_paso1").style.display = "none";
+ 
+            document.getElementById("img_paso2").style.display = "none";
+
+        
+  document.getElementById("img_paso3").style.display = "block";
+  document.getElementById("sel_proyect").style.display = "none";
+   document.getElementById("cont_area").style.display = "none";
+            
+    }
+ }
+   
+    document.getElementById("img_paso3").style.display = "none";
+  document.getElementById("sel_proyect").style.display = "none";
+  document.getElementById("text_valor_paso").style.display = "none";
+      document.getElementById("img_paso1").style.display = "none";
+         document.getElementById("img_paso2").style.display = "none";    
+
+  document.getElementById("btn_siguiente").style.display = "none";
          document.getElementById("forma_Triangulo").style.display = "none";
   document.getElementById("forma_Circulo").style.display = "none";
     document.getElementById("forma_cuadrado").style.display = "none";
@@ -381,7 +588,8 @@ Al llenar el formulario, un asesor comercial se pondrá en contacto contigo para
         function handleSelectChange(event) {
             var seleccion=event.target.value;
             console.log( seleccion)
-
+   document.getElementById("img_paso1").style.display = "block";
+    document.getElementById("btn_siguiente").style.display = "block";
 if(seleccion=="1"){
      document.getElementById("forma_cuadrado").style.display = "block";
              document.getElementById("forma_Triangulo").style.display = "none";
